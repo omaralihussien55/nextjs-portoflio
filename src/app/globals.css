@@ -18,16 +18,43 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.bg-image-home{ 
+  background-image: url(../../public/developer-coding-in-php.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-image-home-overlay{
+  background-color: rgba(52, 51, 51,.5);
+
+}
+
+.strong-banners{
+  width:max-content ;
+  letter-spacing: 7px;
+}
+.span-blind{
+  position: absolute;
+  width: 6%;
+  height: 100%;
+  background-color: white;
+  display: block;
+  top: 0;
+  mix-blend-mode: difference;
+  padding: 5px;
+  border-radius: 4px;
+  transition: all 1s;
+  animation: moveword 6s  linear infinite alternate ;
+}
+
+@keyframes moveword {
+  0%{left: 0;}
+  100%{left: 94%}
 }
