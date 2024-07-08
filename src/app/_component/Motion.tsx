@@ -10,7 +10,6 @@ const Motion:FC<{children:React.ReactNode}> = ({children}) => {
           transition={{ease:"easeInOut",duration:0.75}}
       >
       {children}
-      
     </motion.div>
   )
 }
